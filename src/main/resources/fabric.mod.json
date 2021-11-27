@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "crit",
+  "version": "${version}",
+  "name": "Critical Damage",
+  "description": "Adds critical damage mechanics to the game",
+  "authors": [
+    "XBlos"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/crit/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.xblos.crit.client.CritClient"
+    ],
+    "main": [
+      "net.xblos.crit.Crit"
+    ],
+    "modmenu": [
+      "net.xblos.crit.integration.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "crit.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.5",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}
