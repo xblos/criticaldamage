@@ -21,12 +21,12 @@ public final class CritDamageEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean isAvailableForEnchantedBookOffer() {
+    public boolean isTreasure() {
         return true;
     }
 
     @Override
-    public boolean isAvailableForRandomSelection() {
+    public boolean isAvailableForEnchantedBookOffer() {
         return true;
     }
 
