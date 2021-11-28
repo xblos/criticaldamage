@@ -35,7 +35,8 @@ public class EntityParticlesIntegration {
                             target,
                             config.getParticleDuration(),
                             config.getParticleText(),
-                            config.getParticleColor()
+                            config.getParticleColor(),
+                            (config.getParticleSize() * .01f) * .03f
                         )
                     ));
             }

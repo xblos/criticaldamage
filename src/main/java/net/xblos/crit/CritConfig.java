@@ -54,6 +54,8 @@ public class CritConfig implements ConfigData {
         @ColorPicker
         private int particleColor = 0xf44336;
         private String particleText = "CRITICAL!";
+        @BoundedDiscrete(min = 30L, max = 100L)
+        private int particleSize = 70;
         private int particleDuration = 25;
     }
 
@@ -99,6 +101,10 @@ public class CritConfig implements ConfigData {
 
     public String getParticleText() {
         return entityParticles.particleText;
+    }
+
+    public int getParticleSize() {
+        return entityParticles.particleSize;
     }
 
     public int getParticleDuration() {
