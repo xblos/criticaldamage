@@ -37,5 +37,6 @@
   "text.autoconfig.crit.option.entityParticles.particleEnabled": "Enable particles (requires Entity Particles)",
   "text.autoconfig.crit.option.entityParticles.particleColor": "Particle color",
   "text.autoconfig.crit.option.entityParticles.particleText": "Particle text",
+  "text.autoconfig.crit.option.entityParticles.particleSize": "Particle size",
   "text.autoconfig.crit.option.entityParticles.particleDuration": "Particle duration"
 }
