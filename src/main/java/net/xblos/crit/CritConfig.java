@@ -29,7 +29,7 @@ public class CritConfig implements ConfigData {
     private static class Base {
         @BoundedDiscrete(max = 100L)
         private int critChance = 0;
-        private int critDamage = 0;
+        private int critDamage = 10;
     }
 
     private static class Potion {
