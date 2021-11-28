@@ -9,3 +9,5 @@ A Minecraft mod that adds critical damage mechanics to the game
 ### Soft Requirements:
 - [Entity Particles](https://github.com/xblos/entityparticles)
 - [ModMenu](https://modrinth.com/mod/modmenu)
+
+Available on [Artifactory](https://xblos.jfrog.io/ui/native/mc/net/xblos/entityparticles)
