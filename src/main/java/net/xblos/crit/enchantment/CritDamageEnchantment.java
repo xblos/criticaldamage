@@ -22,12 +22,12 @@ public final class CritDamageEnchantment extends Enchantment {
 
     @Override
     public boolean isAvailableForEnchantedBookOffer() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAvailableForRandomSelection() {
-        return false;
+        return true;
     }
 
     public int getMultiplier(int level) {
