@@ -9,11 +9,13 @@
   "item.minecraft.potion.effect.critchance": "Potion of Critical Chance",
   "item.minecraft.splash_potion.effect.critchance": "Splash Potion of Critical Chance",
   "item.minecraft.lingering_potion.effect.critchance": "Lingering Potion of Critical Chance",
+  "item.minecraft.tipped_arrow.effect.critchance": "Arrow of Critical Chance",
 
   "effect.crit.damage": "Crit Damage Up",
   "item.minecraft.potion.effect.critdamage": "Potion of Critical Damage",
   "item.minecraft.splash_potion.effect.critdamage": "Splash Potion of Critical Damage",
   "item.minecraft.lingering_potion.effect.critdamage": "Lingering Potion of Critical Damage",
+  "item.minecraft.tipped_arrow.effect.critdamage": "Arrow of Critical Damage",
 
   "text.autoconfig.crit.title": "Critical Damage Configuration",
 
