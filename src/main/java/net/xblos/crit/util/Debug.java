@@ -12,7 +12,12 @@ public class Debug {
     }
 
     public static void msg(String msg) {
-        PlayerEntity player = MinecraftClient.getInstance().player;
-        if (player != null) Debug.msg(player, msg);
+        try {
+            PlayerEntity player = MinecraftClient.getInstance().player;
+            if (player != null) Debug.msg(player, msg);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
