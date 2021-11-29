@@ -1,9 +1,9 @@
 {
   "enchantment.crit.damage": "Critical Damage",
-  "enchantment.crit.damage.desc": "Increases critical hit damage",
+  "enchantment.crit.damage.desc": "Increases critical hit damage.",
 
   "enchantment.crit.chance": "Critical Chance",
-  "enchantment.crit.chance.desc": "Increases critical hit chance",
+  "enchantment.crit.chance.desc": "Increases critical hit chance.",
 
   "effect.crit.chance": "Crit Chance Up",
   "item.minecraft.potion.effect.critchance": "Potion of Critical Chance",
