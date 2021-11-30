@@ -47,7 +47,7 @@ public class Crit implements ModInitializer {
         critChance += STATUS_EFFECTS.getCritChanceEffect().getChance(player);
         critDamage += STATUS_EFFECTS.getCritDamageEffect().getMultiplier(player);
 
-        if (player.getRandom().nextInt(101) <= critChance) {
+        if (player.getRandom().nextInt(100) <= critChance) {
             EntityParticlesIntegration.sendRequest(player, target);
             return baseDamage * (1f + ((float) critDamage * .01f));
         }

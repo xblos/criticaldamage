@@ -59,12 +59,12 @@ public class CritConfig implements ConfigData {
         private int particleDuration = 25;
     }
 
-    public int getBaseCritDamage() {
-        return base.critDamage;
-    }
-
     public int getBaseCritChance() {
         return base.critChance;
+    }
+
+    public int getBaseCritDamage() {
+        return base.critDamage;
     }
 
     public int getPotionCritChanceDuration() {
