@@ -4,6 +4,7 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.BoundedDiscrete;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.ColorPicker;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 
 import static me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.*;
 
