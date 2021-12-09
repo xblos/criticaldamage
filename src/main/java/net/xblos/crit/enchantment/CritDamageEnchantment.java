@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 public final class CritDamageEnchantment extends Enchantment {
 
     public CritDamageEnchantment() {
-        super(Rarity.RARE, EnchantmentTarget.ARMOR, new EquipmentSlot[] {
+        super(Rarity.UNCOMMON, EnchantmentTarget.ARMOR, new EquipmentSlot[] {
             EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET
         });
     }
