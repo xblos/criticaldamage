@@ -7,9 +7,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.xblos.crit.Crit;
 
+import java.util.Random;
+
 public class CritComponent extends ItemComponent {
 
     public static final Identifier ID = new Identifier(Crit.MODID, "component");
+    private static final Random rand = new Random();
 
     public CritComponent(ItemStack stack) {
         super(stack);
@@ -32,10 +35,10 @@ public class CritComponent extends ItemComponent {
     }
 
     private int randomChance() {
-        return 5;
+        return rand.nextInt(Crit.getConfig().getMaxRingCritChance());
     }
 
     private int randomDamage() {
-        return 10;
+        return rand.nextInt(Crit.getConfig().getMaxRingCritDamage());
     }
 }

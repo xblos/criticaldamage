@@ -25,6 +25,9 @@ public class CritConfig implements ConfigData {
     private final Enchantment enchantment = new Enchantment();
 
     @CollapsibleObject(startExpanded = true)
+    private final Trinket trinket = new Trinket();
+
+    @CollapsibleObject(startExpanded = true)
     private final EntityParticles entityParticles = new EntityParticles();
 
     private static class Base {
@@ -48,6 +51,12 @@ public class CritConfig implements ConfigData {
         @BoundedDiscrete(max = 100L)
         private int critChance = 4;
         private int critDamage = 5;
+    }
+
+    private static class Trinket {
+        @BoundedDiscrete(max = 100L)
+        private int maxRingCritChance = 10;
+        private int maxRingCritDamage = 15;
     }
 
     private static class EntityParticles {
@@ -110,6 +119,14 @@ public class CritConfig implements ConfigData {
 
     public int getParticleDuration() {
         return entityParticles.particleDuration;
+    }
+
+    public int getMaxRingCritChance() {
+        return trinket.maxRingCritChance;
+    }
+
+    public int getMaxRingCritDamage() {
+        return trinket.maxRingCritDamage;
     }
 }
 

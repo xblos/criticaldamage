@@ -23,13 +23,11 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
+    mavenCentral()
     maven { url "https://maven.blamejared.com" }
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
-    maven {
-        name = "Ladysnake Libs"
-        url = "https://ladysnake.jfrog.io/artifactory/mods"
-    }
+    maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
     maven {
         url "https://xblos.jfrog.io/artifactory/mc"
         credentials {
@@ -48,11 +46,7 @@ dependencies {
     modCompileOnly modRuntime("com.terraformersmc:modmenu:${project.mod_menu_version}")
     modImplementation "net.xblos:entityparticles:${project.entity_particles_version}"
     modImplementation "dev.emi:trinkets:${project.trinkets_version}"
-    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${project.cardinal_components_version}"
     modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:${project.cardinal_components_version}"
-    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${project.cardinal_components_version}"
-    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:${project.cardinal_components_version}"
-
 }
 
 processResources {
