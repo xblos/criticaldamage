@@ -19,8 +19,8 @@
 
   "item.crit.ring": "Critical Ring",
   "item.crit.necklace": "Critical Necklace",
-  "tooltip.crit.chance": "Critical Chance",
-  "tooltip.crit.damage": "Critical Damage",
+  "tooltip.crit.chance": "Critical Chance: %d%%",
+  "tooltip.crit.damage": "Critical Damage: %d%%",
 
   "text.autoconfig.crit.title": "Critical Damage Configuration",
 
@@ -48,5 +48,5 @@
   "text.autoconfig.crit.option.entityParticles.particleColor": "Particle color",
   "text.autoconfig.crit.option.entityParticles.particleText": "Particle text",
   "text.autoconfig.crit.option.entityParticles.particleSize": "Particle size",
-  "text.autoconfig.crit.option.entityParticles.particleDuration": "Particle duration",
+  "text.autoconfig.crit.option.entityParticles.particleDuration": "Particle duration"
 }
