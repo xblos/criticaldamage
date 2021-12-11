@@ -25,18 +25,15 @@ public class CritComponent extends ItemComponent {
     @Override
     public void onTagInvalidated() {
         super.onTagInvalidated();
-        chance = -1;
-        damage = -1;
+        chance = damage = -1;
     }
 
     public int getChance() {
-        if (chance >= 0) return chance;
-        return getOrGenerate("chance");
+        return chance >= 0 ? chance : getOrGenerate("chance");
     }
 
     public int getDamage() {
-        if (damage >= 0) return damage;
-        return getOrGenerate("damage");
+        return damage >= 0 ? damage : getOrGenerate("damage");
     }
 
     private int randomChance() {
@@ -55,26 +52,15 @@ public class CritComponent extends ItemComponent {
     }
 
     private int getOrGenerate(String key) {
-        if (!hasTag(key, NbtType.INT))
+        if (!hasTag("chance", NbtType.INT) && !hasTag("damage", NbtType.INT))
             generateRandomValues();
         return getInt(key);
     }
 
     private void generateRandomValues() {
-        switch (rand.nextInt(3)) {
-            case 0 -> {
-                chance = randomChance();
-                damage = 0;
-            }
-            case 1 -> {
-                chance = 0;
-                damage = randomDamage();
-            }
-            default -> {
-                chance = randomChance();
-                damage = randomDamage();
-            }
-        }
+        int randType = rand.nextInt(3);
+        chance = randType <= 1 ? randomChance() : 0;
+        damage = randType >= 1 ? randomDamage() : 0;
         putInt("chance", chance);
         putInt("damage", damage);
     }

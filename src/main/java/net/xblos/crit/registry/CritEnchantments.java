@@ -6,7 +6,7 @@ import net.xblos.crit.enchantment.CritDamageEnchantment;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class Enchantments implements CritRegistry {
+public class CritEnchantments implements CritRegistry {
 
     private CritChanceEnchantment critChance;
     private CritDamageEnchantment critDamage;

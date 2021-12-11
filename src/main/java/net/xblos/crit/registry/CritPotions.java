@@ -8,7 +8,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class Potions implements CritRegistry {
+public class CritPotions implements CritRegistry {
 
     private CritChancePotion critChance;
     private CritDamagePotion critDamage;

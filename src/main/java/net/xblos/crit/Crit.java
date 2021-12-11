@@ -14,10 +14,11 @@ import net.minecraft.util.Pair;
 import net.xblos.crit.component.CritComponent;
 import net.xblos.crit.component.CritComponents;
 import net.xblos.crit.integration.EntityParticlesIntegration;
-import net.xblos.crit.registry.Enchantments;
-import net.xblos.crit.registry.Items;
-import net.xblos.crit.registry.Potions;
-import net.xblos.crit.registry.StatusEffects;
+import net.xblos.crit.integration.TrinketsIntegration;
+import net.xblos.crit.registry.CritEnchantments;
+import net.xblos.crit.registry.CritItems;
+import net.xblos.crit.registry.CritPotions;
+import net.xblos.crit.registry.CritStatusEffects;
 import net.xblos.crit.util.Debug;
 import net.xblos.crit.util.LootTableHelper;
 
@@ -28,10 +29,10 @@ public class Crit implements ModInitializer {
     public static final String MODID = "crit";
     public static final String CHANNEL = "net.xblos." + MODID;
 
-    public static final Enchantments ENCHANTMENTS = new Enchantments();
-    public static final StatusEffects STATUS_EFFECTS = new StatusEffects();
-    public static final Potions POTIONS = new Potions();
-    public static final Items ITEMS = new Items();
+    public static final CritEnchantments ENCHANTMENTS = new CritEnchantments();
+    public static final CritStatusEffects STATUS_EFFECTS = new CritStatusEffects();
+    public static final CritPotions POTIONS = new CritPotions();
+    public static final CritItems ITEMS = new CritItems();
 
     public static final LootTableHelper LOOT_TABLE_HELPER = new LootTableHelper();
 
@@ -66,17 +67,20 @@ public class Crit implements ModInitializer {
         critChance += STATUS_EFFECTS.getCritChanceEffect().getChance(player);
         critDamage += STATUS_EFFECTS.getCritDamageEffect().getMultiplier(player);
 
-        Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);
-
-        if (component.isPresent()) {
-            for (Item critItem : ITEMS.toArray()) {
-                for (Pair<SlotReference, ItemStack> equipped : component.get().getEquipped(critItem)) {
-                    ItemStack ring = equipped.getRight();
-                    CritComponent critComponent = CritComponents.get(ring);
-                    Debug.msg(player, critComponent.getChance());
-                    Debug.msg(player, critComponent.getDamage());
-                    critChance += critComponent.getChance();
-                    critDamage += critComponent.getDamage();
+        if (TrinketsIntegration.isModLoaded()) {
+            Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);
+            if (component.isPresent()) {
+                for (Item critItem : ITEMS.toArray()) {
+                    for (Pair<SlotReference, ItemStack> equipped : component.get().getEquipped(critItem)) {
+                        ItemStack ring = equipped.getRight();
+                        CritComponent critComponent = CritComponents.get(ring);
+                        int trinketChance = critComponent.getChance();
+                        int trinketDamage = critComponent.getDamage();
+                        Debug.msg(player, "Chance: " + trinketChance);
+                        Debug.msg(player, "Damage: " + trinketDamage);
+                        critChance += trinketChance;
+                        critDamage += trinketDamage;
+                    }
                 }
             }
         }

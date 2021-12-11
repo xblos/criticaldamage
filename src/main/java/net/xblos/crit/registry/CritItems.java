@@ -4,10 +4,11 @@ import net.minecraft.item.Item;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.registry.Registry;
 import net.xblos.crit.Crit;
+import net.xblos.crit.integration.TrinketsIntegration;
 import net.xblos.crit.item.CritNecklace;
 import net.xblos.crit.item.CritRing;
 
-public class Items implements CritRegistry {
+public class CritItems implements CritRegistry {
 
     private CritRing critRing;
     private CritNecklace critNecklace;
@@ -16,6 +17,7 @@ public class Items implements CritRegistry {
 
     @Override
     public void register() {
+        if (!TrinketsIntegration.isModLoaded()) return;
         critRing = Registry.register(Registry.ITEM, CritRing.ID, new CritRing());
         critNecklace = Registry.register(Registry.ITEM, CritNecklace.ID, new CritNecklace());
 

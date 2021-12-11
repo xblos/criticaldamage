@@ -94,14 +94,14 @@ public class LootTableHelper {
     private final List<Loot> loots = new ArrayList<>();
 
     public void registerLoot() {
-        LootTableLoadingCallback.EVENT.register(this::doRegisterLoot);
+        LootTableLoadingCallback.EVENT.register(this::onRegisterLoot);
     }
 
     public void addToAllChests(Item item, LootNumberProvider provider) {
         loots.add(new Loot(item, provider, Chest.identifiers()));
     }
 
-    private void doRegisterLoot(
+    private void onRegisterLoot(
         ResourceManager resourceManager,
         LootManager manager,
         Identifier id,
