@@ -6,7 +6,7 @@ import net.xblos.crit.effect.CritDamageStatusEffect;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class StatusEffects implements CritRegistry {
+public class CritStatusEffects implements CritRegistry {
 
     private CritChanceStatusEffect critChance;
     private CritDamageStatusEffect critDamage;

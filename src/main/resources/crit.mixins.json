@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "BrewingRecipeRegistryInvoker",
-    "PlayerEntityMixin",
-    "TooltipMixin"
+    "PlayerEntityMixin"
   ],
   "client": [],
   "server": [],

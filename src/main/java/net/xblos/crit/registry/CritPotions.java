@@ -8,7 +8,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class Potions implements CritRegistry {
+public class CritPotions implements CritRegistry {
 
     private CritChancePotion critChance;
     private CritDamagePotion critDamage;
@@ -29,14 +29,14 @@ public class Potions implements CritRegistry {
 
         BrewingRecipeRegistryInvoker.registerPotionRecipe(
             net.minecraft.potion.Potions.STRONG_STRENGTH,
-            Items.GHAST_TEAR,
-            critDamage
+            Items.PHANTOM_MEMBRANE,
+            critChance
         );
 
         BrewingRecipeRegistryInvoker.registerPotionRecipe(
             net.minecraft.potion.Potions.STRONG_STRENGTH,
-            Items.PHANTOM_MEMBRANE,
-            critChance
+            Items.BLAZE_ROD,
+            critDamage
         );
     }
 

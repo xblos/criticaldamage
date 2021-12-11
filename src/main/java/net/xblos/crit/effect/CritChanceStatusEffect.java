@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.xblos.crit.CritStats;
 import org.jetbrains.annotations.Nullable;
 
 public final class CritChanceStatusEffect extends StatusEffect {
@@ -22,6 +23,6 @@ public final class CritChanceStatusEffect extends StatusEffect {
 
     public int getChance(PlayerEntity player) {
         return player.getActiveStatusEffects().get(Crit.STATUS_EFFECTS.getCritChanceEffect()) != null
-            ? Crit.getConfig().getEffectCritChance() : 0;
+            ? CritStats.EFFECT_CHANCE : 0;
     }
 }

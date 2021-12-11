@@ -5,4 +5,8 @@ import net.xblos.crit.Crit;
 
 public class CritNecklace extends CritTrinket {
     public static final Identifier ID = new Identifier(Crit.MODID, "necklace");
+
+    public CritNecklace(int tier) {
+        super(tier);
+    }
 }

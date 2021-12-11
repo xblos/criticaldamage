@@ -3,6 +3,7 @@ package net.xblos.crit.potion;
 import net.xblos.crit.Crit;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
+import net.xblos.crit.CritStats;
 
 public final class CritDamagePotion extends Potion {
 
@@ -11,7 +12,7 @@ public final class CritDamagePotion extends Potion {
             "critdamage",
             new StatusEffectInstance(
                 Crit.STATUS_EFFECTS.getCritDamageEffect(),
-                Crit.getConfig().getPotionCritDamageDuration() * 20
+                CritStats.POTION_DAMAGE_DURATION
             )
         );
     }

@@ -14,50 +14,12 @@ public class CritConfig implements ConfigData {
     private final Base base = new Base();
 
     @CollapsibleObject(startExpanded = true)
-    private final Potion potion = new Potion();
-
-    @CollapsibleObject(startExpanded = true)
-    private final Effect effect = new Effect();
-
-    @CollapsibleObject(startExpanded = true)
-    private final Enchantment enchantment = new Enchantment();
-
-    @CollapsibleObject(startExpanded = true)
-    private final Trinket trinket = new Trinket();
-
-    @CollapsibleObject(startExpanded = true)
     private final EntityParticles entityParticles = new EntityParticles();
 
     private static class Base {
         @BoundedDiscrete(max = 100L)
         private int critChance = 0;
         private int critDamage = 10;
-    }
-
-    private static class Potion {
-        private int critChanceDuration = 60;
-        private int critDamageDuration = 60;
-    }
-
-    private static class Effect {
-        @BoundedDiscrete(max = 100L)
-        private int critChance = 20;
-        private int critDamage = 40;
-    }
-
-    private static class Enchantment {
-        @BoundedDiscrete(max = 100L)
-        private int critChance = 4;
-        private int critDamage = 5;
-    }
-
-    private static class Trinket {
-        @BoundedDiscrete(max = 100L)
-        private int minCritChance = 4;
-        @BoundedDiscrete(max = 100L)
-        private int maxCritChance = 15;
-        private int minCritDamage = 5;
-        private int maxCritDamage = 20;
     }
 
     private static class EntityParticles {
@@ -78,30 +40,6 @@ public class CritConfig implements ConfigData {
         return base.critDamage;
     }
 
-    public int getPotionCritChanceDuration() {
-        return potion.critChanceDuration;
-    }
-
-    public int getPotionCritDamageDuration() {
-        return potion.critDamageDuration;
-    }
-
-    public int getEffectCritChance() {
-        return effect.critChance;
-    }
-
-    public int getEffectCritDamage() {
-        return effect.critDamage;
-    }
-
-    public int getEnchantmentCritChance() {
-        return enchantment.critChance;
-    }
-
-    public int getEnchantmentCritDamage() {
-        return enchantment.critDamage;
-    }
-
     public boolean isParticleEnabled() {
         return entityParticles.particleEnabled;
     }
@@ -120,22 +58,6 @@ public class CritConfig implements ConfigData {
 
     public int getParticleDuration() {
         return entityParticles.particleDuration;
-    }
-
-    public int getTrinketMinCritChance() {
-        return trinket.minCritChance;
-    }
-
-    public int getTrinketMaxCritChance() {
-        return trinket.maxCritChance;
-    }
-
-    public int getTrinketMinCritDamage() {
-        return trinket.minCritDamage;
-    }
-
-    public int getTrinketMaxCritDamage() {
-        return trinket.maxCritDamage;
     }
 }
 

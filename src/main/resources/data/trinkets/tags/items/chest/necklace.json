@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "crit:necklace"
+    "crit:necklace_1",
+    "crit:necklace_2",
+    "crit:necklace_3"
   ]
 }

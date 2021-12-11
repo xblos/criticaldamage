@@ -17,12 +17,13 @@ import net.xblos.entityparticles.particle.ParticleRenderer;
 
 public class EntityParticlesIntegration {
 
+    private static final boolean MOD_LOADED = Integration.isModLoaded("net.xblos.entityparticles.EntityParticles");
+
     private static final Identifier CHANNEL = new Identifier(Crit.CHANNEL + ".entityparticles");
     private static ParticleRenderer renderer;
-    private static final boolean modLoaded = isModLoaded();
 
     public static void register() {
-        if (!modLoaded) return;
+        if (!MOD_LOADED) return;
         renderer = new ParticleRenderer();
         CritConfig config = Crit.getConfig();
         ClientPlayNetworking.registerGlobalReceiver(CHANNEL, (client, h, buf, s) -> {
@@ -46,20 +47,13 @@ public class EntityParticlesIntegration {
     }
 
     public static void sendRequest(PlayerEntity player, Entity target) {
-        if (!modLoaded) return;
+        if (!MOD_LOADED) return;
         PacketByteBuf packet = PacketByteBufs.create();
         packet.writeInt(target.getId());
         ServerPlayNetworking.send((ServerPlayerEntity) player, CHANNEL, packet);
     }
 
-    private static boolean isModLoaded() {
-        try {
-            Class.forName("net.xblos.entityparticles.EntityParticles",
-                false, EntityParticlesIntegration.class.getClassLoader());
-            return true;
-        }
-        catch (LinkageError | ClassNotFoundException e) {
-            return false;
-        }
+    public static boolean isModLoaded() {
+        return MOD_LOADED;
     }
 }
