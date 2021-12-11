@@ -6,8 +6,6 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry.BoundedDiscrete;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.ColorPicker;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 
-import static me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.*;
-
 @SuppressWarnings("FieldMayBeFinal")
 @Config(name = "crit")
 public class CritConfig implements ConfigData {
@@ -55,8 +53,11 @@ public class CritConfig implements ConfigData {
 
     private static class Trinket {
         @BoundedDiscrete(max = 100L)
-        private int maxRingCritChance = 10;
-        private int maxRingCritDamage = 15;
+        private int minCritChance = 4;
+        @BoundedDiscrete(max = 100L)
+        private int maxCritChance = 15;
+        private int minCritDamage = 5;
+        private int maxCritDamage = 20;
     }
 
     private static class EntityParticles {
@@ -121,12 +122,20 @@ public class CritConfig implements ConfigData {
         return entityParticles.particleDuration;
     }
 
-    public int getMaxRingCritChance() {
-        return trinket.maxRingCritChance;
+    public int getTrinketMinCritChance() {
+        return trinket.minCritChance;
     }
 
-    public int getMaxRingCritDamage() {
-        return trinket.maxRingCritDamage;
+    public int getTrinketMaxCritChance() {
+        return trinket.maxCritChance;
+    }
+
+    public int getTrinketMinCritDamage() {
+        return trinket.minCritDamage;
+    }
+
+    public int getTrinketMaxCritDamage() {
+        return trinket.maxCritDamage;
     }
 }
 
