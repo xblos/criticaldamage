@@ -5,10 +5,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
 import net.xblos.crit.component.CritComponent;
 import net.xblos.crit.component.CritComponents;
 import net.xblos.crit.item.CritTrinket;
@@ -34,19 +32,16 @@ public abstract class TooltipMixin {
 
     @Inject(method = "getTooltip", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD)
     public void injectCritComponentTips(@Nullable PlayerEntity player, TooltipContext ctx, CallbackInfoReturnable<List<Text>> cir, List<Text> list) {
-        if (!(this.getItem() instanceof CritTrinket)) return;
-        if (ctx.isAdvanced()) return;
-        if (player == null) return;
-        if (!player.getInventory().contains((ItemStack) (Object) this)) return;
-
-        addCritComponentTips(list);
+//        if (!(this.getItem() instanceof CritTrinket)) return;
+//        if (ctx.isAdvanced()) return;
+//        addCritComponentTips(list);
     }
 
     private void addCritComponentTips(List<Text> tips) {
         CritComponent critComponent = CritComponents.get((ItemStack) (Object) this);
-        String chanceTip = new TranslatableText("tooltip.crit.chance").getString();
-        String damageTip = new TranslatableText("tooltip.crit.damage").getString();
-        tips.add(new LiteralText(chanceTip + ": " + critComponent.getChance() + "%").formatted(DARK_GRAY));
-        tips.add(new LiteralText(damageTip + ": " + critComponent.getDamage() + "%").formatted(DARK_GRAY));
+        int chance = critComponent.getChance();
+        int damage = critComponent.getDamage();
+        if (chance > 0) tips.add(new TranslatableText("tooltip.crit.chance", chance).formatted(DARK_GRAY));
+        if (damage > 0) tips.add(new TranslatableText("tooltip.crit.damage", damage).formatted(DARK_GRAY));
     }
 }
