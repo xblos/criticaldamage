@@ -11,10 +11,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Pair;
-import net.xblos.crit.component.CritComponent;
-import net.xblos.crit.component.CritComponents;
 import net.xblos.crit.integration.EntityParticlesIntegration;
 import net.xblos.crit.integration.TrinketsIntegration;
+import net.xblos.crit.item.CritTrinket;
 import net.xblos.crit.registry.CritEnchantments;
 import net.xblos.crit.registry.CritItems;
 import net.xblos.crit.registry.CritPotions;
@@ -70,16 +69,13 @@ public class Crit implements ModInitializer {
         if (TrinketsIntegration.isModLoaded()) {
             Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);
             if (component.isPresent()) {
-                for (Item critItem : ITEMS.toArray()) {
+                for (Item critItem : ITEMS.getTrinkets()) {
                     for (Pair<SlotReference, ItemStack> equipped : component.get().getEquipped(critItem)) {
-                        ItemStack ring = equipped.getRight();
-                        CritComponent critComponent = CritComponents.get(ring);
-                        int trinketChance = critComponent.getChance();
-                        int trinketDamage = critComponent.getDamage();
-                        Debug.msg(player, "Chance: " + trinketChance);
-                        Debug.msg(player, "Damage: " + trinketDamage);
-                        critChance += trinketChance;
-                        critDamage += trinketDamage;
+                        CritTrinket trinket = (CritTrinket) equipped.getRight().getItem();
+                        Debug.msg(player, "Chance: " + trinket.getChance());
+                        Debug.msg(player, "Damage: " + trinket.getDamage());
+                        critChance += trinket.getChance();
+                        critDamage += trinket.getDamage();
                     }
                 }
             }

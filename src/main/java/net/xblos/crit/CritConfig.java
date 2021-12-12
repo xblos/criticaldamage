@@ -52,12 +52,6 @@ public class CritConfig implements ConfigData {
     }
 
     private static class Trinket {
-        @BoundedDiscrete(max = 100L)
-        private int minCritChance = 4;
-        @BoundedDiscrete(max = 100L)
-        private int maxCritChance = 15;
-        private int minCritDamage = 5;
-        private int maxCritDamage = 20;
     }
 
     private static class EntityParticles {
@@ -120,22 +114,6 @@ public class CritConfig implements ConfigData {
 
     public int getParticleDuration() {
         return entityParticles.particleDuration;
-    }
-
-    public int getTrinketMinCritChance() {
-        return trinket.minCritChance;
-    }
-
-    public int getTrinketMaxCritChance() {
-        return trinket.maxCritChance;
-    }
-
-    public int getTrinketMinCritDamage() {
-        return trinket.minCritDamage;
-    }
-
-    public int getTrinketMaxCritDamage() {
-        return trinket.maxCritDamage;
     }
 }
 

@@ -5,4 +5,8 @@ import net.xblos.crit.Crit;
 
 public class CritRing extends CritTrinket {
     public static final Identifier ID = new Identifier(Crit.MODID, "ring");
+
+    public CritRing(int tier) {
+        super(tier);
+    }
 }

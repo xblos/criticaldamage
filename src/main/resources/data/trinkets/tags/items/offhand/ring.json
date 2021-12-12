@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "crit:ring"
+    "crit:ring_1",
+    "crit:ring_2",
+    "crit:ring_3"
   ]
 }

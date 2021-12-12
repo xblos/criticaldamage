@@ -46,7 +46,6 @@ dependencies {
     modCompileOnly modRuntime("com.terraformersmc:modmenu:${project.mod_menu_version}")
     modImplementation "net.xblos:entityparticles:${project.entity_particles_version}"
     modImplementation "dev.emi:trinkets:${project.trinkets_version}"
-    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:${project.cardinal_components_version}"
 }
 
 processResources {

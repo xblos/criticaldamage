@@ -17,8 +17,15 @@
   "item.minecraft.lingering_potion.effect.critdamage": "Lingering Potion of Critical Damage",
   "item.minecraft.tipped_arrow.effect.critdamage": "Arrow of Critical Damage",
 
-  "item.crit.ring": "Critical Ring",
-  "item.crit.necklace": "Critical Necklace",
+  "item.crit.ring_1": "Critical Ring I",
+  "item.crit.ring_2": "Critical Ring II",
+  "item.crit.ring_3": "Critical Ring III",
+  "item.crit.necklace_1": "Critical Necklace I",
+  "item.crit.necklace_2": "Critical Necklace II",
+  "item.crit.necklace_3": "Critical Necklace III",
+  "item.crit.trinket.desc_1": "Slightly increases critical chance and critical damage.",
+  "item.crit.trinket.desc_2": "Moderately increases critical chance and critical damage.",
+  "item.crit.trinket.desc_3": "Greatly increases critical chance and critical damage.",
   "tooltip.crit.chance": "Critical Chance: %d%%",
   "tooltip.crit.damage": "Critical Damage: %d%%",
 

@@ -21,8 +21,13 @@ public final class CritChanceEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean isTreasure() {
-        return true;
+    public int getMinPower(int level) {
+        return 1 + (level - 1) * 11;
+    }
+
+    @Override
+    public int getMaxPower(int level) {
+        return getMinPower(level) + 20;
     }
 
     @Override
