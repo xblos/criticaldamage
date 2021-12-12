@@ -72,8 +72,6 @@ public class Crit implements ModInitializer {
                 for (Item critItem : ITEMS.getTrinkets()) {
                     for (Pair<SlotReference, ItemStack> equipped : component.get().getEquipped(critItem)) {
                         CritTrinket trinket = (CritTrinket) equipped.getRight().getItem();
-                        Debug.msg(player, "Chance: " + trinket.getChance());
-                        Debug.msg(player, "Damage: " + trinket.getDamage());
                         critChance += trinket.getChance();
                         critDamage += trinket.getDamage();
                     }
