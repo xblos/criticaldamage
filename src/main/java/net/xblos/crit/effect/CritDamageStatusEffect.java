@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.xblos.crit.CritStats;
 import org.jetbrains.annotations.Nullable;
 
 public final class CritDamageStatusEffect extends StatusEffect {
@@ -21,7 +22,7 @@ public final class CritDamageStatusEffect extends StatusEffect {
     public void applyInstantEffect(@Nullable Entity source, @Nullable Entity attacker, LivingEntity target, int amplifier, double proximity) { }
 
     public int getMultiplier(PlayerEntity player) {
-        return player.getActiveStatusEffects().get(Crit.STATUS_EFFECTS.getCritDamageEffect()) != null
-            ? Crit.getConfig().getEffectCritDamage() : 0;
+        return player.getActiveStatusEffects().get(Crit.STATUS_EFFECTS.getCritDamageEffect()) != null ?
+            CritStats.EFFECT_DAMAGE : 0;
     }
 }

@@ -6,6 +6,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.xblos.crit.CritStats;
 
 public final class CritChanceEnchantment extends Enchantment {
 
@@ -36,7 +37,7 @@ public final class CritChanceEnchantment extends Enchantment {
     }
 
     public int getChance(int level) {
-        return level * Crit.getConfig().getEnchantmentCritChance();
+        return CritStats.enchantmentChance(level);
     }
 
     public int getChance(ItemStack armorPiece) {

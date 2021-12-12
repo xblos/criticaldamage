@@ -9,6 +9,7 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import net.minecraft.world.World;
+import net.xblos.crit.CritStats;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -24,8 +25,8 @@ public abstract class CritTrinket extends TrinketItem {
     public CritTrinket(int tier) {
         super(new Item.Settings().maxDamage(200).rarity(Rarity.UNCOMMON));
         this.tier = tier;
-        chance = 5 * tier;
-        damage = 6 * tier + 2;
+        chance = CritStats.trinketChance(tier);
+        damage = CritStats.trinketDamage(tier);
     }
 
     public int getChance() {

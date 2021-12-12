@@ -3,6 +3,7 @@ package net.xblos.crit.potion;
 import net.xblos.crit.Crit;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
+import net.xblos.crit.CritStats;
 
 public final class CritChancePotion extends Potion {
 
@@ -11,7 +12,7 @@ public final class CritChancePotion extends Potion {
             "critchance",
             new StatusEffectInstance(
                 Crit.STATUS_EFFECTS.getCritChanceEffect(),
-                Crit.getConfig().getPotionCritChanceDuration() * 20
+                CritStats.POTION_CHANCE_DURATION
             )
         );
     }
