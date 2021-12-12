@@ -23,7 +23,7 @@ public class CritItems implements CritRegistry {
 
         int trinketCount = 2 * CritTrinket.MAX_TIER;
         trinkets = new CritTrinket[trinketCount];
-        BinomialLootNumberProvider rng = BinomialLootNumberProvider.create(trinketCount, .01f);
+        BinomialLootNumberProvider rng = BinomialLootNumberProvider.create(trinketCount, .005f);
 
         for (int i = 0, tier = 1; i < trinketCount; i += 2) {
             CritRing ring = Registry.register(Registry.ITEM, CritRing.ID + "_" + tier, new CritRing(tier));

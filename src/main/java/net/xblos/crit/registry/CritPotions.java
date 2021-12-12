@@ -29,14 +29,14 @@ public class CritPotions implements CritRegistry {
 
         BrewingRecipeRegistryInvoker.registerPotionRecipe(
             net.minecraft.potion.Potions.STRONG_STRENGTH,
-            Items.GHAST_TEAR,
-            critDamage
+            Items.PHANTOM_MEMBRANE,
+            critChance
         );
 
         BrewingRecipeRegistryInvoker.registerPotionRecipe(
             net.minecraft.potion.Potions.STRONG_STRENGTH,
-            Items.PHANTOM_MEMBRANE,
-            critChance
+            Items.BLAZE_ROD,
+            critDamage
         );
     }
 

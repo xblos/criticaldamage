@@ -43,22 +43,22 @@ public class LootTableHelper {
         UNDERWATER_RUIN_SMALL("underwater_ruin_small"),
         WOODLAND_MANSION("woodland_mansion"),
 
-        VILLAGE_ARMORER("village_armorer"),
-        VILLAGE_BUTCHER("village_butcher"),
-        VILLAGE_CARTOGRAPHER("village_cartographer"),
-        VILLAGE_DESERT_HOUSE("village_desert_house"),
-        VILLAGE_FISHER("village_fisher"),
-        VILLAGE_FLETCHER("village_fletcher"),
-        VILLAGE_MASON("village_mason"),
-        VILLAGE_PLAINS_HOUSE("village_plains_house"),
-        VILLAGE_SAVANNA_HOUSE("village_savanna_house"),
-        VILLAGE_SHEPHERD("village_shepherd"),
-        VILLAGE_SNOWY_HOUSE("village_snowy_house"),
-        VILLAGE_TAIGA_HOUSE("village_taiga_house"),
-        VILLAGE_TANNERY("village_tannery"),
-        VILLAGE_TEMPLE("village_temple"),
-        VILLAGE_TOOLSMITH("village_toolsmith"),
-        VILLAGE_WEAPONSMITH("village_weaponsmith");
+        VILLAGE_ARMORER("village/village_armorer"),
+        VILLAGE_BUTCHER("village/village_butcher"),
+        VILLAGE_CARTOGRAPHER("village/village_cartographer"),
+        VILLAGE_DESERT_HOUSE("village/village_desert_house"),
+        VILLAGE_FISHER("village/village_fisher"),
+        VILLAGE_FLETCHER("village/village_fletcher"),
+        VILLAGE_MASON("village/village_mason"),
+        VILLAGE_PLAINS_HOUSE("village/village_plains_house"),
+        VILLAGE_SAVANNA_HOUSE("village/village_savanna_house"),
+        VILLAGE_SHEPHERD("village/village_shepherd"),
+        VILLAGE_SNOWY_HOUSE("village/village_snowy_house"),
+        VILLAGE_TAIGA_HOUSE("village/village_taiga_house"),
+        VILLAGE_TANNERY("village/village_tannery"),
+        VILLAGE_TEMPLE("village/village_temple"),
+        VILLAGE_TOOLSMITH("village/village_toolsmith"),
+        VILLAGE_WEAPONSMITH("village/village_weaponsmith");
 
         private final Identifier id;
 
