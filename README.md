@@ -7,6 +7,7 @@ A Minecraft mod that adds critical damage mechanics to the game
 - [Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)
 
 ### Soft Requirements:
+- [Trinkets](https://modrinth.com/mod/trinkets)
 - [Entity Particles](https://github.com/xblos/entityparticles)
 - [ModMenu](https://modrinth.com/mod/modmenu)
 
