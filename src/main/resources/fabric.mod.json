@@ -20,22 +20,14 @@
     ],
     "modmenu": [
       "net.xblos.crit.integration.ModMenuIntegration"
-    ],
-    "cardinal-components-item": [
-      "net.xblos.crit.component.CritComponents"
     ]
   },
   "mixins": [
     "crit.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.12.4",
+    "fabricloader": ">=0.12.12",
     "fabric": "*",
-    "minecraft": "1.17.1"
-  },
-  "custom": {
-    "cardinal-components": [
-      "crit:component"
-    ]
+    "minecraft": "1.18.1"
   }
 }
