@@ -11,7 +11,7 @@ import net.xblos.crit.CritStats;
 public final class CritChanceEnchantment extends Enchantment {
 
     public CritChanceEnchantment() {
-        super(Rarity.UNCOMMON, EnchantmentTarget.ARMOR, new EquipmentSlot[] {
+        super(Rarity.RARE, EnchantmentTarget.ARMOR, new EquipmentSlot[] {
             EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET
         });
     }
