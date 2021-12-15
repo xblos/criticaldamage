@@ -9,11 +9,11 @@ public class CritStats {
     public static final int POTION_DAMAGE_DURATION = 90 * 20;
 
     public static int enchantmentChance(int level) {
-        return 5 + (2 * level);
+        return level > 0 ? 5 + (2 * level) : 0;
     }
 
     public static int enchantmentDamage(int level) {
-        return 6 * level;
+        return level > 0 ? 6 * level : 0;
     }
 
     public static int trinketChance(int tier) {
