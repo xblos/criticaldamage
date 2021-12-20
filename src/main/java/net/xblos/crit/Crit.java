@@ -18,7 +18,6 @@ import net.xblos.crit.registry.CritEnchantments;
 import net.xblos.crit.registry.CritItems;
 import net.xblos.crit.registry.CritPotions;
 import net.xblos.crit.registry.CritStatusEffects;
-import net.xblos.crit.util.Debug;
 import net.xblos.crit.util.LootTableHelper;
 
 import java.util.Optional;
