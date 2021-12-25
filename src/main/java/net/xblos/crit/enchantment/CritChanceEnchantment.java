@@ -36,6 +36,11 @@ public final class CritChanceEnchantment extends Enchantment {
         return true;
     }
 
+    @Override
+    public boolean isTreasure() {
+        return Crit.getConfig().isEnchantmentTreasure();
+    }
+
     public int getChance(int level) {
         return CritStats.enchantmentChance(level);
     }

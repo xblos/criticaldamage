@@ -35,23 +35,14 @@
   "text.autoconfig.crit.option.base.critChance": "Base critical chance (%)",
   "text.autoconfig.crit.option.base.critDamage": "Base critical damage (%)",
 
-  "text.autoconfig.crit.option.potion": "Potions",
-  "text.autoconfig.crit.option.potion.critChanceDuration": "Critical chance potion duration (in seconds)",
-  "text.autoconfig.crit.option.potion.critDamageDuration": "Critical damage potion duration (in seconds)",
-
-  "text.autoconfig.crit.option.effect": "Status Effects",
-  "text.autoconfig.crit.option.effect.critChance": "Critical Chance Up (%)",
-  "text.autoconfig.crit.option.effect.critDamage": "Critical Damage Up (%)",
-
   "text.autoconfig.crit.option.enchantment": "Enchantments",
-  "text.autoconfig.crit.option.enchantment.critChance": "Enchantment critical chance per level (%)",
-  "text.autoconfig.crit.option.enchantment.critDamage": "Enchantment critical damage per level (%)",
+  "text.autoconfig.crit.option.enchantment.isTreasure": "Enchantments can only be found in loot chests",
 
   "text.autoconfig.crit.option.trinket.maxRingCritChance": "Maximum critical chance found on rings",
   "text.autoconfig.crit.option.trinket.maxRingCritDamage": "Maximum critical damage found on rings",
 
   "text.autoconfig.crit.option.entityParticles": "Particles",
-  "text.autoconfig.crit.option.entityParticles.particleEnabled": "Enable particles (requires Entity Particles)",
+  "text.autoconfig.crit.option.entityParticles.particleEnabled": "Enable particles",
   "text.autoconfig.crit.option.entityParticles.particleColor": "Particle color",
   "text.autoconfig.crit.option.entityParticles.particleText": "Particle text",
   "text.autoconfig.crit.option.entityParticles.particleSize": "Particle size",

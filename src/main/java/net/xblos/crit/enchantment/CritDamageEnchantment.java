@@ -36,6 +36,11 @@ public final class CritDamageEnchantment extends Enchantment {
         return true;
     }
 
+    @Override
+    public boolean isTreasure() {
+        return Crit.getConfig().isEnchantmentTreasure();
+    }
+
     public int getMultiplier(int level) {
         return CritStats.enchantmentDamage(level);
     }

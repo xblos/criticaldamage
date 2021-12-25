@@ -14,12 +14,19 @@ public class CritConfig implements ConfigData {
     private final Base base = new Base();
 
     @CollapsibleObject(startExpanded = true)
+    private final Enchantment enchantment = new Enchantment();
+
+    @CollapsibleObject(startExpanded = true)
     private final EntityParticles entityParticles = new EntityParticles();
 
     private static class Base {
         @BoundedDiscrete(max = 100L)
         private int critChance = 0;
         private int critDamage = 10;
+    }
+
+    private static class Enchantment {
+        private boolean isTreasure = true;
     }
 
     private static class EntityParticles {
@@ -38,6 +45,10 @@ public class CritConfig implements ConfigData {
 
     public int getBaseCritDamage() {
         return base.critDamage;
+    }
+
+    public boolean isEnchantmentTreasure() {
+        return enchantment.isTreasure;
     }
 
     public boolean isParticleEnabled() {
